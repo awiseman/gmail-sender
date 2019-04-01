@@ -49,3 +49,11 @@ optional arguments:
   -d, --dry-run         don't actually send the email
   --html                treat message as html
 ```
+
+# Build release package
+
+Designed to be distributed as a standard wheel package
+
+```bash
+python setup.py bdist_wheel
+```
