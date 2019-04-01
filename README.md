@@ -14,7 +14,7 @@ pip install
 
 # Usage
 
-Requires a subject and 1+ recipient addresses. Also, requires a valid 
+Requires a subject, send address, and 1+ recipient addresses. Also, requires a valid 
 `credentials.json` file be present in the run-time directory, providing access
 to the Gmail API.
 
@@ -25,19 +25,18 @@ Message can be read from either a literal parameter or a file
 Attachments can be in-lined and a content id can be assigned for reference
 in an html message body.
 
-```bash
-usage: gmail-sender [-h] [-s SENDER] [-m MESSAGE] [-M MESSAGE_FILE]
-                    [-a ATTACH] [-c CONTENT_ID] [-i] [-d] [--html]
-                    subject to [to ...]
+```text
+gmail-sender [-h] [-m MESSAGE] [-M MESSAGE_FILE] [-a ATTACH]
+                    [-c CONTENT_ID] [-i] [-d] [--html]
+                    subject sender recipient [recipient ...]
 
 positional arguments:
   subject               message subject
-  to                    address to send to
+  sender                email to send message from
+  recipient             addressee(s) of the message
 
 optional arguments:
   -h, --help            show this help message and exit
-  -s SENDER, --sender SENDER
-                        email to send message from
   -m MESSAGE, --message MESSAGE
                         message to send
   -M MESSAGE_FILE, --message-file MESSAGE_FILE
